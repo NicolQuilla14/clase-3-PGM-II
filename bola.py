@@ -2,7 +2,7 @@ from vpython import *
 import asyncio
 import random
 
-scene = canvas(title="Movimiento diagonal con VPython", width=800, height=600)
+scene = canvas(title="Combinación de Conceptos en VPython", width=800, height=600)
 
 #colores
 colores = [color.red, color.green, color.blue, color.yellow, color.orange]
@@ -32,8 +32,8 @@ async def mover_objeto(objeto, velocidad):
 cubo = box(pos=vector(-x_lim, 4, 0), size=vector(1,1,1), color=color.red)
 esfera = sphere(pos=vector(-x_lim, -4, 0), radius=1, color=color.green)
 
-vel_cubo = vector(0.05, -0.03, 0)
-vel_esfera = vector(0.03, 0.02, 0)
+vel_cubo = vector(0.02, -0.02, 0)
+vel_esfera = vector(0.02, 0.02, 0)
 
 async def main():
     task1 = asyncio.create_task(mover_objeto(cubo, vel_cubo))    
